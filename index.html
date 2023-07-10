@@ -76,9 +76,14 @@
     $('article img').addClass('image-center');
     $('article p:last-child').remove();
     $('#title').css('fontSize', '50px');
-    $('<li>').text('Hello').insertAfter($('ol li:last-child'))
-
-
+    $('<li>').text('Hello').insertAfter($('ol li:last-child'));
+    $('aside').empty();
+    $('aside').add("<p>").text('We\'re sorry for the mess.');
+    $('.form-control').on("change", $('input'), function() {
+     var colorValue = $(this).val();
+      $('body').css('backgroundColor', `rgb(${colorValue}, ${colorValue}, ${colorValue})`);
+      //console.log(colorValue);
+    });
   </script>
 </body>
 
